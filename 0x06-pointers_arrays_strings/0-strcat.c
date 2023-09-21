@@ -1,24 +1,24 @@
 #include "main.h"
 
 /**
- * *_strcat - function commute srtings
- * @dest: param pointer to a char
- * @src: param pointer to a char
- * Return: return value of dest
+ * _strcat - Function for concatenating strings
+ * @dest: Pointer to a character array (string)
+ * @src: Pointer to a character array (string)
+ * Return: Pointer to the concatenated string in 'dest'
  */
 
 char *_strcat(char *dest, char *src)
 {
-	int i;
-	int j;
+	int i = 0;
+	int j = 0;
 
-	i = 0;
-	j = 0;
-
+	/* Find the end of the 'dest' string */
 	while (dest[i] != '\0')
 	{
 		i++;
 	}
+
+	/* Copy characters from 'src' to the end of 'dest' */
 	while (src[j] != '\0')
 	{
 		dest[i] = src[j];
@@ -26,6 +26,9 @@ char *_strcat(char *dest, char *src)
 		i++;
 	}
 
+	/* Add the null terminator to make it a valid string */
 	dest[i] = '\0';
+
+	/* Return a pointer to the concatenated string in 'dest' */
 	return (dest);
 }
