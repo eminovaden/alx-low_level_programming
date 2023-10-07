@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * *array_range - It creates an array of integers
+ * *array_range - creates an array of integers
  * @min: minimum range of values stored
  * @max: maximum range of values stored and number of elements
  * Return: pointer to the new array
@@ -18,16 +18,15 @@ int *array_range(int min, int max)
 
 	s = max - min + 1;
 
-	f = calloc(sizeof(int) * s);
+	f = calloc(s, sizeof(int));
 
 	if (!f)
 		return (NULL);
 
 	while (min <= max)
-    {
+	{
 		f[i] = min++;
-      i++;
-    }
-
+		i++;
+	}
 	return (f);
 }
