@@ -2,12 +2,13 @@
 #include "main.h"
 
 /**
- * *string_nconcat - It concatenates the bytes of a string to another string
+ * *string_nconcat - concatenates the bytes of a string to another string
  * @s1: string to be appended to
  * @s2: string to concatenate from
  * @n: bytes from s2 to concatenate to s1
- * Return: A pointer to the resulting string
+ * Return: a pointer to the resulting string
  */
+
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *f;
@@ -19,9 +20,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		len2++;
 
 	if (n < len2)
-		f = calloc(sizeof(char) * (len1 + n + 1));
+		f = calloc((len1 + n + 1), sizeof(char));
 	else
-		f = calloc(sizeof(char) * (len1 + len2 + 1));
+		f = calloc((len1 + len2 + 1), sizeof(char));
 
 	if (f == NULL)
 		return (NULL);
