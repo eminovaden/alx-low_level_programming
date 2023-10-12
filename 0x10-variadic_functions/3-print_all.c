@@ -3,7 +3,7 @@
 #include <stdarg.h>
 
 /**
- * print_all - It prints anything
+ * print_all - prints anything
  * @format: list of types of arguments passed to the function
  */
 
@@ -46,5 +46,5 @@ void print_all(const char * const format, ...)
 		}
 	}
 	printf("\n");
-	va_end(list);
+	va_end(l);
 }
