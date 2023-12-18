@@ -1,3 +1,5 @@
+#include <unistd.h>
+
 int rand()
 {
 	static int ct = -1;
